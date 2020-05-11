@@ -2,7 +2,7 @@ from django.shortcuts import render
 from reportlab.pdfgen import canvas    
 from django.http import HttpResponse
 
-from azure.storage.blob import blockblobservice
+#from azure.storage.blob import blockblobservice
 from django.conf import settings as djangoSettings
 
 from mimetypes import guess_type
