@@ -121,20 +121,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+"""
 STATIC_URL = '/static/'
 STATIC_ROOT = 'D:/stockyard/main/static'
+"""
 
 
+DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
+STATICFILES_STORAGE = 'backend.custom_azure.AzureStaticStorage'
 
-"""DEFAULT_FILE_STORAGE = 'main.custom_azure.AzureMediaStorage'
-STATICFILES_STORAGE = 'main.custom_azure.AzureStaticStorage'
+STATIC_LOCATION = "static"
+MEDIA_LOCATION = "media"
 
-STATIC_LOCATION = "farmsteel"
-MEDIA_LOCATION = "test"
-
-AZURE_ACCOUNT_NAME = "farmsteestoragec94960c0b"
+AZURE_ACCOUNT_NAME = "djangoaccountstorage1"
 
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'"""
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
