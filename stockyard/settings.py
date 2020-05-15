@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main.apps.MainConfig'
+    'main.apps.MainConfig',
+    'storages',
     
 ]
 
@@ -127,8 +128,8 @@ STATIC_ROOT = 'D:/stockyard/main/static'
 """
 
 
-DEFAULT_FILE_STORAGE = 'main.custom_azure.AzureMediaStorage'
-STATICFILES_STORAGE = 'main.custom_azure.AzureStaticStorage'
+DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
+STATICFILES_STORAGE = 'backend.custom_azure.AzureStaticStorage'
 
 STATIC_LOCATION = "static/main"
 MEDIA_LOCATION = "media"
@@ -138,3 +139,4 @@ AZURE_ACCOUNT_NAME = "djazcentral"
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+
