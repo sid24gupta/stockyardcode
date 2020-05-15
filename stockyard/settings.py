@@ -130,7 +130,7 @@ STATIC_ROOT = 'D:/stockyard/main/static'
 DEFAULT_FILE_STORAGE = 'main.custom_azure.AzureMediaStorage'
 STATICFILES_STORAGE = 'main.custom_azure.AzureStaticStorage'
 
-STATIC_LOCATION = "static"
+STATIC_LOCATION = "static/main"
 MEDIA_LOCATION = "media"
 
 AZURE_ACCOUNT_NAME = "djazcentral"
