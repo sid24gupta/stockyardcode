@@ -1,4 +1,4 @@
-django==2.1.7
+django==2.2.13
 reportlab==3.5.42
 requests==2.23.0
 django-storages[azure]==1.9.1
